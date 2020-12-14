@@ -7,7 +7,7 @@ if(isset($_POST['c_guardar'])) {
 
     if($cliente == "" || $contrasena == ""){
         
-        header("Location: ../public/index.php");
+        header("Location: ../index.php");
 
     }else{
     
@@ -20,7 +20,7 @@ if(isset($_POST['c_guardar'])) {
             $rut = $row['rut'];
             $_SESSION['usery_cliente'] = $rut;  
             
-            header("Location: ../public/index.php");
+            header("Location: ../index.php");
         
         }else{
             $_SESSION['login_mensaje'] = 'Usuario o contraseña incorrecto';
