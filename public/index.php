@@ -5,17 +5,17 @@ include("../db/db.php");
 ?>
 
 <!-----   Seccion cabecera    ----->
-<?php include("includes/header.php")?>
+<?php include("public/includes/header.php")?>
 
 <?php 
 // ------  Codigo variable de sesion de usuario desde login -------
 
 if(!isset($_SESSION['usery_cliente'])){
     
-    include("includes/nav-bar.php");
+    include("public/includes/nav-bar.php");
 
 }else{
-    include("includes/nav-bar-cliente.php");
+    include("public/includes/nav-bar-cliente.php");
 
 }
 
@@ -23,7 +23,7 @@ if(!isset($_SESSION['usery_cliente'])){
 
 
 <!--------- Mensaje Cambio de contraseña --------->
-<?php include("mensajes_alertas/login_incorrecto.php")?>
+<?php include("public/mensajes_alertas/login_incorrecto.php")?>
         <!--------- FIN Mensaje Cambio de contraseña --------->
 
     <main class="mb-5">
@@ -112,7 +112,7 @@ if(!isset($_SESSION['usery_cliente'])){
                 <div class="col-md-6 col-sm-10 item-pasos paso-uno bg-white item-ptd" data-aos="fade-up" >
                 <div class="row ">
                         <div class="col-5 pt-4 pl-4">
-                            <img src="img/select2.svg" class="w-100" alt="">
+                            <img src="public/img/select2.svg" class="w-100" alt="">
                         </div>
                         <div class="col-2 pt-5">
                             <h1>2</h1>
@@ -125,7 +125,7 @@ if(!isset($_SESSION['usery_cliente'])){
                 <div class="col-md-6 col-sm-12 item-pasos paso-uno bg-white item-ptd" data-aos="fade-up">
                     <div class="row ">
                         <div class="col-5 pt-4 pl-4">
-                            <img src="img/revisar_ficha.svg" class="w-75" alt="">
+                            <img src="public/img/revisar_ficha.svg" class="w-75" alt="">
                         </div>
                         <div class="col-2 pt-5">
                             <h1>3</h1>
@@ -144,7 +144,7 @@ if(!isset($_SESSION['usery_cliente'])){
                 <div class="col-md-6 col-sm-12 item-pasos paso-uno bg-white item-ptd" data-aos="fade-up">
                 <div class="row ">
                         <div class="col-5 pt-5 pl-5">
-                            <img src="img/evaluar.svg" class="w-100" alt="">
+                            <img src="public/img/evaluar.svg" class="w-100" alt="">
                         </div>
                         <div class="col-2 pt-5">
                             <h1>4</h1>
