@@ -29,7 +29,7 @@ if(!isset($_SESSION['usery_cliente'])){
     <main class="mb-5">
         <div class="main_img">
             
-            <form action="list-tec.php" method="POST" >
+            <form action="public/list-tec.php" method="POST" >
                 <div class="main_content pt-4">
                     <div class="titulo_index">
                         <h1 class="text-center font-italic pb-4">Contacta al técnico ideal !!</h1>
