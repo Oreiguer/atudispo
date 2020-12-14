@@ -31,7 +31,7 @@
 			<button type="button" class="close" data-dismiss="modal">&times;</button>
 		  </div>
 		  <div class="modal-body ">
-			<form action="public/controllers/verificar_login_cliente.php" method="POST" >
+			<form action="controllers/verificar_login_cliente.php" method="POST" >
 			<div class="form-group">
 				<label for="recipient-name" class="col-form-label">Usuario</label>
 				<input type="text" class="form-control" name="cliente" id="usuario_tecnico" placeholder="ejemplo@gmail.com" onpaste="return false" required>
