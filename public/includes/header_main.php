@@ -5,16 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>atudispo</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
-	<link rel="stylesheet" href="css/style.css">
-	<link rel="stylesheet" href="css/aos.css">
-	<link href="fontawesome/css/all.css" rel="stylesheet">
+	<link rel="stylesheet" href="public/css/style.css">
+	<link rel="stylesheet" href="public/css/aos.css">
+	<link href="public/fontawesome/css/all.css" rel="stylesheet">
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
-	<script type="text/javascript" src="js/jquery.js"></script>
-    <script type="text/javascript" src="js/jquery.Rut.js"></script>
-    <script type="text/javascript" src="js/jquery-ui.js"></script>
-    <script type="text/javascript" src="js/jquery.validate.js"></script>
-    <script type="text/javascript" src="js/validarut.js"></script>
+	<script type="text/javascript" src="public/js/jquery.js"></script>
+    <script type="text/javascript" src="public/js/jquery.Rut.js"></script>
+    <script type="text/javascript" src="public/js/jquery-ui.js"></script>
+    <script type="text/javascript" src="public/js/jquery.validate.js"></script>
+    <script type="text/javascript" src="public/js/validarut.js"></script>
     
 
 </head>
