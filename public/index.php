@@ -5,7 +5,7 @@ include("../db/db.php");
 ?>
 
 <!-----   Seccion cabecera    ----->
-<?php include("public/includes/header.php")?>
+<?php include("public/includes/header_main.php")?>
 
 <?php 
 // ------  Codigo variable de sesion de usuario desde login -------
@@ -160,4 +160,4 @@ if(!isset($_SESSION['usery_cliente'])){
 
 
 <!-----   Seccion pie de pagina contenido    ----->
-<?php include("public/includes/footer.php")?>
+<?php include("public/includes/footer_main.php")?>
