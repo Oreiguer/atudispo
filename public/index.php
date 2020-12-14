@@ -92,7 +92,7 @@ if(!isset($_SESSION['usery_cliente'])){
                 <div class="col-md-6 col-sm-12 item-pasos paso-uno bg-white item-ptd " data-aos="fade-up">
                     <div class="row ">
                         <div class="col-5 pt-5 pl-4">
-                            <img src="img/search.svg" class="w-75" alt="">
+                            <img src="public/img/search.svg" class="w-75" alt="">
                         </div>
                         <div class="col-2 pt-5">
                             <h1>1</h1>
