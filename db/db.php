@@ -10,12 +10,19 @@ session_start();
 
 
 $conn = mysqli_connect(
+    'us-cdbr-east-02.cleardb.com',
+    'bffb4d7229f932',
+    'dbc91188',
+    'heroku_4ad79e3c3dae7d9'
+);
+
+
+/*
+$conn = mysqli_connect(
     'localhost',
     'root',
     '',
     'app'
 );
-
-
-
+*/
 ?>
