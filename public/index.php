@@ -160,4 +160,4 @@ if(!isset($_SESSION['usery_cliente'])){
 
 
 <!-----   Seccion pie de pagina contenido    ----->
-<?php include("includes/footer.php")?>
+<?php include("public/includes/footer.php")?>
