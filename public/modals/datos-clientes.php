@@ -14,7 +14,7 @@
                         <div class="">
                         <div class="justify-content-center my-3">
                             <div class="">          
-                                <form action="../controllers/a_registro-cliente.php" method="POST" enctype="multipart/form-data" name="reloj24" id="form1">
+                                <form action="controllers/a_registro-cliente.php" method="POST" enctype="multipart/form-data" name="reloj24" id="form1">
                                 <div class="">
 
 <?php 
@@ -99,33 +99,25 @@
                                     </div>
 
                                     <div class="row">
+                                        <div class="col-12">
+                                            <div class="form-group">
+                                                <label for="">Dirección:</label>
+                                                <input type="text" value="<?php echo $direccion ?>"  placeholder="Pje. almendros 123 - Villa el almendral" class="form-control" name="direccion" required autocomplete="off" onpaste="return false">
+                                            </div>
+                                        </div>
+                                        
+                                    </div>
+
+                                    <div class="row">
+<!--
                                         <div class="col-6">
                                             <div class="form-group">
                                             <label for="">Foto:</label>
                                             <input type="file" value="<?php echo $foto ?>" name="archivo" class="form-control">
                                             </div>
                                         </div>
-                                        <div class="col-6">
-                                            <div class="form-group">
-                                            <label for="sexo">Sexo:</label>
-                                            <select name="sexo" id="sexo" class="form-control">
-                                                <option value="<?php echo $sexo ?>"><?php echo $sexo ?></option>
-                                                <option value="Masculino">Masculino</option>
-                                                <option value="Femenino">Femenino</option>
-                                            </select>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    
-                                    
-                                    
-                                    <div class="row">
-                                        <div class="col-6">
-                                            <div class="form-group">
-                                                <label for="">Dirección:</label>
-                                                <input type="text" value="<?php echo $direccion ?>"  placeholder="Pje. almendros 123 - Villa el almendral" class="form-control" name="direccion" required autocomplete="off" onpaste="return false">
-                                            </div>
-                                        </div>
+
+-->
                                         <div class="col-6">
                                             <div class="form-group">
                                             <label for="comuna">Comuna:</label>
@@ -146,6 +138,17 @@
                                                 <option value="12">Doñihue</option>
                                                 <option value="13">Coltauco</option>
                                                 </optgroup>
+                                            </select>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-6">
+                                            <div class="form-group">
+                                            <label for="sexo">Sexo:</label>
+                                            <select name="sexo" id="sexo" class="form-control">
+                                                <option value="<?php echo $sexo ?>"><?php echo $sexo ?></option>
+                                                <option value="Masculino">Masculino</option>
+                                                <option value="Femenino">Femenino</option>
                                             </select>
                                             </div>
                                         </div>

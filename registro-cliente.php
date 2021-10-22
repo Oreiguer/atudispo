@@ -1,18 +1,18 @@
- <!-- <?php include("../db/db.php") ?>  -->
+ <!-- <?php include("db/db.php") ?>  -->
 
 <!-----   Seccion cabecera    ----->
-<?php include("includes/header.php")?>
+<?php include("public/includes/header.php")?>
 
 
 <!-----   Nav-bar   ----->
-<?php include("includes/nav-bar.php")?>
+<?php include("public/includes/nav-bar.php")?>
 
 <!----   Mensaje llenado de campos obligtorio  ---->
-<?php include("mensajes_alertas/mensaje_llenado_campos_obligatorio.php")?>   
+<?php include("public/mensajes_alertas/mensaje_llenado_campos_obligatorio.php")?>   
 <!---- FIN  Mensaje llenado de campos obligtorio  ---->
 
 <!----   Mensaje llenado de campos obligtorio  ---->
-<?php include("mensajes_alertas/usuario_tec_yaExiste.php")?>   
+<?php include("public/mensajes_alertas/usuario_tec_yaExiste.php")?>   
 <!---- FIN  Mensaje llenado de campos obligtorio  ---->
     
 <section class="reg-tec m-5 ">
@@ -20,9 +20,9 @@
         <div class="container">
         <div class="row justify-content-center my-3">
             <div class="col-9">          
-                <form action="../controllers/c_registro-tec.php" method="POST" enctype="multipart/form-data" name="reloj24" id="form1">
+                <form action="controllers/c_registro-cliente.php" method="POST" enctype="multipart/form-data" name="reloj24" id="form1">
                 <div class="">
-                <h2 class="text-center my-4">REGISTRO TÉCNICOS</h2>
+                <h2 class="text-center my-4">REGISTRO CLIENTES</h2>
 
                     <div class="row mt-5">
                         <div class="col-6">
@@ -85,51 +85,53 @@
                     </div>
 
                     <div class="row">
-                        <div class="col-6">
+                        <div class="col-12">
                             <div class="form-group">
-                            <label for="">Foto:</label>
-                            <input type="file" name="archivo" class="form-control">
+                                <label for="">Dirección:</label>
+                                <input type="text" placeholder="Pje. almendros 123 - Villa el almendral" class="form-control" name="direccion" value=""  required autocomplete="off" onpaste="return false">
                             </div>
                         </div>
+                    </div>
+
+                    <div class="row">
+<!--
+                        <div class="col-6">
+                            <div class="form-group">
+                                <label for="">Foto:</label>
+                                <input type="file" name="archivo" class="form-control">
+                            </div>
+                        </div>
+-->
+                        <div class="col-6">
+                            <div class="form-group">
+                                <label for="comuna">Comuna:</label>
+                                <select name="comuna" required="" id="address" class="address-input form-control">
+                                    <option disabled="" selected="" value="">Selecciona tu comuna</option>
+                                    <optgroup label="Región Metropolitana">
+                                    <option value="7">La Florida</option>
+                                    <option value="8">La Reina</option>
+                                    <option value="6">Maipú</option>
+                                    <option value="4">Providencia</option>
+                                    <option value="5">Santiago</option>
+                                    </optgroup>
+                                    <optgroup label="Sexta región">
+                                    <option value="9">Rancagua</option>
+                                    <option value="10">Rengo</option>
+                                    <option value="11">Machalí</option>
+                                    <option value="12">Doñihue</option>
+                                    <option value="13">Coltauco</option>
+                                    </optgroup>
+                                </select>
+                            </div>
+                        </div>
+                        
+
                         <div class="col-6">
                             <div class="form-group">
                             <label for="sexo">Sexo:</label>
                             <select name="sexo" id="sexo" class="form-control">
                                 <option value="Masculino">Masculino</option>
                                 <option value="Femenino">Femenino</option>
-                            </select>
-                            </div>
-                        </div>
-                    </div>
-                    
-                   
-                    
-                    <div class="row">
-                        <div class="col-6">
-                            <div class="form-group">
-                            <label for="">Dirección:</label>
-                            <input type="text" placeholder="Pje. almendros 123 - Villa el almendral" class="form-control" name="direccion" value=""  required autocomplete="off" onpaste="return false">
-                        </div>
-                        </div>
-                        <div class="col-6">
-                            <div class="form-group">
-                            <label for="comuna">Comuna:</label>
-                            <select name="comuna" required="" id="address" class="address-input form-control">
-                                <option disabled="" selected="" value="">Selecciona tu comuna</option>
-                                <optgroup label="Región Metropolitana">
-                                <option value="7">La Florida</option>
-                                <option value="8">La Reina</option>
-                                <option value="6">Maipú</option>
-                                <option value="4">Providencia</option>
-                                <option value="5">Santiago</option>
-                                </optgroup>
-                                <optgroup label="Sexta región">
-                                <option value="9">Rancagua</option>
-                                <option value="10">Rengo</option>
-                                <option value="11">Machalí</option>
-                                <option value="12">Doñihue</option>
-                                <option value="13">Coltauco</option>
-                                </optgroup>
                             </select>
                             </div>
                         </div>
@@ -153,4 +155,4 @@
 
 
 <!-----   Seccion pie de pagina contenido    ----->
-<?php include("includes/footer.php")?>
+<?php include("public/includes/footer.php")?>

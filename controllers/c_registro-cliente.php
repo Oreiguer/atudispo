@@ -56,7 +56,7 @@ if(!file_exists('../archivos')){
         if(mysqli_num_rows($result) == 1) {
             $_SESSION['usuario_tec_existe'] = 'Usuario ya existe';
             $_SESSION['color_mensaje'] = 'danger';
-            header("Location: ../public/registro-cliente.php");
+            header("Location: ../registro-cliente.php");
 
         }else{
             if($nombre == null || $nombre == ""){
@@ -73,7 +73,7 @@ if(!file_exists('../archivos')){
              if($result){
                 
                 $_SESSION['usery_cliente'] = $rut;  
-                header("Location: ../public/index.php");
+                header("Location: ../perfil_clientes.php");
              }else{
                  die("fallo la consulta");
              } 

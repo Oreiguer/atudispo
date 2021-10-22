@@ -13,7 +13,7 @@ if(isset($_POST['guardar'])){
 
     if($comentario == "" ){ 
 
-         header("Location: ../public/lista_evaluacion.php");
+         header("Location: ../lista_evaluacion.php");
 
     }else{
 
@@ -27,7 +27,7 @@ if(isset($_POST['guardar'])){
             $_SESSION['evaluacion_realizada'] = 'Evaluación realizada correctamente!';
             $_SESSION['color_mensaje'] = 'success';  
          
-            header("Location: ../public/lista_evaluacion.php");
+            header("Location: ../lista_evaluacion.php");
 
         }else{
             die("fallo la consulta");

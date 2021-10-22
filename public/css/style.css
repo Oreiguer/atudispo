@@ -4,6 +4,12 @@
     box-sizing: border-box;
 }
 
+body{
+    overflow-x: hidden;
+}
+
+
+
 /*  INDEX  */
 
 .main_img {
@@ -12,8 +18,8 @@
     background-image: url("../img/tecnicos5.jpg");
     
     background-blend-mode: soft-light;
-    padding: 1px;
-    color: white;
+    
+    color: rgb(255, 255, 255);
     
     align-items: center;
     justify-content: center;
@@ -26,11 +32,24 @@
 } 
 
 .main_content {
-    height: 30vh;
-    background-color: rgba(26, 111, 153, 0.699);
+    height: 35vh;
+    background-color: rgba(26, 111, 153, 0.685);
     width: 100vw;
     
     
+}
+
+.title--header{
+    font-size: 50px;
+}
+
+.select--header{
+    font-size: 18px;
+}
+
+.btn--header{
+    height: 40px;
+    font-size: 18px;
 }
 
 .item-pasos {
@@ -38,6 +57,10 @@
     width: 100%;
     border-radius: 10px;
     
+}
+
+.item-diez{
+    margin: 100px auto;
 }
 
 
@@ -48,6 +71,8 @@ footer{
     background-color: rgb(71, 71, 71);
     
 }
+
+
 /*  FIN INDEX  */
 
 
@@ -197,3 +222,27 @@ footer{
 
 /*  FIN Perfil cliente evaluacion tecnico  */
 /*  FIN PERFIL TECNICOS  */
+
+/* ITEM SUGERENCIAS  */
+
+.sug-form{
+    background-image: radial-gradient( rgb(79, 161, 209), rgb(43, 107, 160));
+}
+
+.sug-form label{
+    color: #fff;
+}
+
+/*  FIN ITEM SUGERENCIAS  */
+
+/* ITEM recuperar pass */
+
+.recuperar-form{
+    background-image: radial-gradient( rgb(101, 158, 223), rgb(43, 98, 160));
+}
+
+.recuperar-form label{
+    color: #fff;
+}
+
+/*  FIN ITEM recuperar pass  */

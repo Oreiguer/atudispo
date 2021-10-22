@@ -26,7 +26,7 @@ if(!file_exists('../archivos')){
 
 
 
- if(isset($_POST['guardar_registro'])){
+if(isset($_POST['guardar_registro'])){
 
      $rut = $_POST['rut'];
      $nombres = $_POST['nombres'];
@@ -40,13 +40,13 @@ if(!file_exists('../archivos')){
   
      
 
-     if($rut == "" || $nombres == "" || $ape_mat == "" || $ape_pat =="" || $correo == "" || $fono == "" || $direccion == ""){ 
+    if($rut == "" || $nombres == "" || $ape_mat == "" || $ape_pat =="" || $correo == "" || $fono == "" || $direccion == ""){ 
          
         $_SESSION['llenado_campos_obligatorio'] = 'Debe llenar todos los campos';
         $_SESSION['color_mensaje'] = 'danger';
 
-         header("Location: ../public/perfil_tecnicos.php");
-      }else{
+         header("Location: ../perfil_tecnicos.php");
+    }else{
        //actualizar foto o no
         if($nombre == null || $nombre == ""){
             $query = "UPDATE usuarios_clientes SET nombres = '$nombres', a_paterno = '$ape_pat',a_materno = '$ape_mat', sexo = '$sexo', direccion = '$direccion', telefono = '$fono', correo = '$correo',comuna = '$comuna' WHERE rut = '$rut' ";
@@ -61,13 +61,13 @@ if(!file_exists('../archivos')){
             $_SESSION['datos_actualizados'] = 'Datos actualizados correctamente!';
             $_SESSION['color_mensaje'] = 'success';   
         
-            header("Location: ../public/perfil_clientes.php");
+            header("Location: ../perfil_clientes.php");
         }else{
         die("fallo la primera consulta");
         } 
        
-      }   
-    }
+    }   
+}
 
 ?>
 

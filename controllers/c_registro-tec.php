@@ -47,7 +47,7 @@ if(!file_exists('../archivos')){
         $_SESSION['llenado_campos_obligatorio'] = 'Debe llenar todos los campos';
         $_SESSION['color_mensaje'] = 'danger';
 
-         header("Location: ../public/registro-tec.php");
+         header("Location: ../registro-tec.php");
       }else{
 
         $query = "SELECT * FROM usuarios_tecnicos WHERE rut = '$rut' ";
@@ -56,7 +56,7 @@ if(!file_exists('../archivos')){
         if(mysqli_num_rows($result) == 1) {
             $_SESSION['usuario_tec_existe'] = 'Usuario ya existe';
             $_SESSION['color_mensaje'] = 'danger';
-            header("Location: ../public/registro-tec.php");
+            header("Location: ../registro-tec.php");
 
         }else{
             if($nombre == null || $nombre == ""){
@@ -77,7 +77,7 @@ if(!file_exists('../archivos')){
                 $_SESSION['bienvenida_tecnico'] = 'Bienvenido! Ahora debes crear tu ficha para darte de alta.';
                 $_SESSION['color_mensaje'] = 'success';  
                 
-                header("Location: ../public/perfil_tecnicos.php");
+                header("Location: ../perfil_tecnicos.php");
              }else{
                  die("fallo la consulta");
              } 

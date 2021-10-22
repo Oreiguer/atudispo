@@ -25,7 +25,7 @@ $(obtener_registros_alumnos());
 function obtener_registros_alumnos(alumnos){
   
   $.ajax({
-    url: 'includes/busqueda_evaluacion.php',
+    url: 'public/busqueda_evaluacion.php',
     type: 'POST',
     dataType: 'html',
     data: {alumnos: alumnos},  

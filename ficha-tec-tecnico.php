@@ -1,5 +1,5 @@
 <?php 
-include("../db/db.php"); 
+include("db/db.php"); 
 
 // ------  Codigo variable de sesion de usuario desde login -------
 $var_sesion = $_SESSION['usery'];
@@ -24,7 +24,6 @@ if($var_sesion == null || $var_sesion == ''){
         $habilidades = $row['habilidades'];
         $certificado = $row['certificado'];
         $experiencias = $row['experiencias'];
-        $certificado = $row['certificado'];
         $foto = $row['nombre_archivo'];
         $tecnico = $row['tecnico'];
 
@@ -33,6 +32,7 @@ if($var_sesion == null || $var_sesion == ''){
       }
 
         if($certificado == null || $certificado == "" || $certificado == "none"){
+            
             $texto = "";
             $clase = "";
         }else{
@@ -42,15 +42,34 @@ if($var_sesion == null || $var_sesion == ''){
 
     }
 }
+
+
+if(!isset($nombre)){$nombre = "";}
+if(!isset($foto)){$foto = "neutral.jpg";}
+if(!isset($a_paterno)){$a_paterno = "";}
+if(!isset($a_materno)){$a_materno = "";}
+if(!isset($presentacion)){$presentacion = "No hay datos";}
+if(!isset($formacion)){$formacion = "No hay datos";}
+if(!isset($habilidades)){$habilidades = "No hay datos";}
+if(!isset($experiencias)){$experiencias = "No hay datos";}
+
+if(!isset($correo)){$correo = "No hay datos";}
+if(!isset($fono)){$fono = "No hay datos";}
+
+if(!isset($certificado)){
+  $certificado = "";
+  $texto = "";
+  $clase = "";
+}
 ?>
 
 
 
 <!-----   Seccion cabecera    ----->
-<?php include("includes/header.php")?>
+<?php include("public/includes/header.php")?>
 
 
-<?php include("includes/nav-bar-tecnico.php")?>
+<?php include("public/includes/nav-bar-tecnico.php")?>
     
 
 
@@ -58,7 +77,7 @@ if($var_sesion == null || $var_sesion == ''){
         <div class="main_img--ficha-tec">
             <div class="main_img--ficha-tec__pantalla row justify-content-center align-items-center">
                 <div class="col-2">
-                    <img src="../archivos/<?php echo $foto ?>" class=" img-ficha-tec rounded-circle" alt="avatar">
+                    <img src="archivos/<?php echo $foto ?>" class=" img-ficha-tec rounded-circle" alt="avatar">
                 </div>
                 <div class="main_ficha-content col-3">
                     <h1 class="text-white "><?php echo $nombre ?> <?php echo $a_paterno ?></h1>
@@ -75,37 +94,42 @@ if($var_sesion == null || $var_sesion == ''){
                 <h3 class="mb-3">Presentación</h3>
                 <p class=""><?php echo $presentacion ?></p>
                <br>
-               <h3 class="mb-3">Formación <a href="../certificados/<?php echo $certificado ?>" class="ml-5 <?php echo $clase ?> " target="_blank" rel="noopener noreferrer"><?php echo $texto ?></a>  </h3>
+               <h3 class="mb-3">Formación <a href="certificados/<?php echo $certificado ?>" class="ml-5 <?php echo $clase ?> " target="_blank" rel="noopener noreferrer"><?php echo $texto ?></a>  </h3>
                <p class=""><?php echo $formacion ?></p>
                <br>
                <h3 class="mb-3">Habilidades</h3>
                <p class=""><?php echo $habilidades ?></p>
                <br>
                <h3 class="mb-3">Experiencias</h3>
-               <p class="pb-5"><?php echo $experiencias ?></p>
+               <p class=""><?php echo $experiencias ?></p>
                
-               <div class="row justify-content-center mb-5" >
-					<div class="col-5">
-						<div class="row align-items-center">
-							<div class="col-3">
-								<img src="img/email.jpg" class="card-img-email" alt="...">
-							</div>
-							<div class="col-5 text-align-center">
-								<h4 class="text-align-center"><?php echo $correo ?> </h4>
-							</div>
-						</div>
-					</div>
-					<div class="col-5 " >
-						<div class="row align-items-center" >
-							<div class="col-3">
-								<img src="img/phone.jpg" class="card-img-phone" alt="...">
-							</div>
-							<div class="col-7 text-align-center">
-								<h4 class="text-align-center">+56 <?php echo $fono ?> </h4>
-							</div>
-						</div>
-					</div>
-				</div>
+               <br>
+               <h3 class="mb-3 text-secondary">Contáctame</h3>
+               <br>
+                <div class="row justify-content-center mb-5" >
+                  <div class="col-7">
+                    <div class="row align-items-center justify-content-center">
+                      <div class="col-2 row justify-content-center">
+                        <img src="public/img/email.jpg" class="card-img-email " alt="...">
+                      </div>
+                      <div class="col-10 text-align-center">
+                        <h4 class="text-align-center pl-2"><?php echo $correo ?> </h4>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-5" >
+                    <div class="row align-items-center justify-content-center" >
+                      <div class="col-2 row justify-content-center">
+                        <img src="public/img/phone.jpg" class="card-img-phone" alt="...">
+                      </div>
+                      <div class="col-10 text-align-center">
+                        <h4 class="text-align-center pl-2">+56 <?php echo $fono ?> </h4>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+
             </div>
         </div>
     </section>
@@ -119,6 +143,7 @@ if($var_sesion == null || $var_sesion == ''){
             <hr>
             <div class="col-7">
             <?php 
+            if(isset($tecnico)){
                   $query = "SELECT usuarios_clientes.nombres AS nom, usuarios_clientes.a_paterno AS ape, evaluaciones.nota1 AS puntualidad, evaluaciones.nota2 AS desempeno, evaluaciones.nota3 AS respon, evaluaciones.comentario AS comentario, evaluaciones.fecha AS fecha FROM usuarios_tecnicos INNER JOIN evaluaciones ON usuarios_tecnicos.id_tecnico = evaluaciones.tecnico INNER JOIN usuarios_clientes ON usuarios_clientes.id_cliente = evaluaciones.cliente WHERE evaluaciones.tecnico = '$tecnico' ORDER BY fecha DESC ";
                   $result = mysqli_query($conn, $query);
 
@@ -154,7 +179,7 @@ if($var_sesion == null || $var_sesion == ''){
                           </div>
                         </div>
 
-                <?php } }else{ ?>
+                <?php }} }else{ ?>
 
                     <h4 class="text-secondary mt-4">No hay comentarios..</h4>
 
@@ -174,4 +199,4 @@ if($var_sesion == null || $var_sesion == ''){
 
 
 <!-----   Seccion pie de pagina contenido    ----->
-<?php include("includes/footer.php")?>
+<?php include("public/includes/footer.php")?>

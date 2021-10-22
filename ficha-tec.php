@@ -1,5 +1,5 @@
 <?php 
-include("../db/db.php"); 
+include("db/db.php"); 
 
     if(isset($_GET['id'])) {
 
@@ -49,7 +49,7 @@ include("../db/db.php");
 
 
 <!-----   Seccion cabecera    ----->
-<?php include("includes/header.php")?>
+<?php include("public/includes/header.php")?>
 
 
 <?php 
@@ -57,10 +57,10 @@ include("../db/db.php");
 
 if(!isset($_SESSION['usery_cliente'])){
     
-    include("includes/nav-bar.php");
+    include("public/includes/nav-bar.php");
 
 }else{
-    include("includes/nav-bar-cliente.php");
+    include("public/includes/nav-bar-cliente.php");
 
 }
 
@@ -69,7 +69,7 @@ if(!isset($_SESSION['usery_cliente'])){
         <div class="main_img--ficha-tec">
             <div class="main_img--ficha-tec__pantalla row justify-content-center align-items-center">
                 <div class="col-2">
-                    <img src="../archivos/<?php echo $foto ?>" class=" img-ficha-tec  rounded-circle" alt="avatar">
+                    <img src="archivos/<?php echo $foto ?>" class=" img-ficha-tec  rounded-circle" alt="avatar">
                 </div>
                 <div class="main_ficha-content col-3">
                     <h1 class="text-white "><?php echo $nombre ?> <?php echo $a_paterno ?></h1>
@@ -86,7 +86,7 @@ if(!isset($_SESSION['usery_cliente'])){
                 <h3 class="mb-3 text-secondary">Presentación</h3>
                 <p class=""><?php echo $presentacion ?></p>
                <br>
-               <h3 class="mb-3 text-secondary">Formación <a href="../certificados/<?php echo $certificado ?>" class="ml-5 <?php echo $clase ?> " target="_blank" rel="noopener noreferrer"><?php echo $texto ?></a>  </h3>
+               <h3 class="mb-3 text-secondary">Formación <a href="certificados/<?php echo $certificado ?>" class="ml-5 <?php echo $clase ?> " target="_blank" rel="noopener noreferrer"><?php echo $texto ?></a>  </h3>
                <p class=""><?php echo $formacion ?></p>
                <br>
                <h3 class="mb-3 text-secondary">Habilidades</h3>
@@ -99,27 +99,28 @@ if(!isset($_SESSION['usery_cliente'])){
                <h3 class="mb-3 text-secondary">Contáctame</h3>
                <br>
                <div class="row justify-content-center mb-5" >
-					<div class="col-5">
-						<div class="row align-items-center">
-							<div class="col-3">
-								<img src="img/email.jpg" class="card-img-email" alt="...">
+					<div class="col-7">
+						<div class="row align-items-center justify-content-center">
+							<div class="col-2 row justify-content-center">
+								<img src="public/img/email.jpg" class="card-img-email " alt="...">
 							</div>
-							<div class="col-5 text-align-center">
-								<h4 class="text-align-center"><?php echo $correo ?> </h4>
+							<div class="col-10 text-align-center">
+								<h4 class="text-align-center pl-2"><?php echo $correo ?> </h4>
 							</div>
 						</div>
 					</div>
-					<div class="col-5 " >
-						<div class="row align-items-center" >
-							<div class="col-3">
-								<img src="img/phone.jpg" class="card-img-phone" alt="...">
+					<div class="col-5" >
+						<div class="row align-items-center justify-content-center" >
+							<div class="col-2 row justify-content-center">
+								<img src="public/img/phone.jpg" class="card-img-phone" alt="...">
 							</div>
-							<div class="col-7 text-align-center">
-								<h4 class="text-align-center">+56 <?php echo $fono ?> </h4>
+							<div class="col-10 text-align-center">
+								<h4 class="text-align-center pl-2">+56 <?php echo $fono ?> </h4>
 							</div>
 						</div>
 					</div>
 				</div>
+                
             </div>
         </div>
     </section>
@@ -150,6 +151,7 @@ if(!isset($_SESSION['usery_cliente'])){
                               <p class="card-text mt-4"><small class="text-muted"><?php echo $row['fech']?></small></p>
                             </div>
                             <div class="ml-auto">
+                            <h6 class="text-center text-secondary ">Evaluación</h6>
                               <ul class="list-group">
                                 <li class="list-group-item d-flex justify-content-between align-items-center">
                                 Puntualidad
@@ -164,6 +166,7 @@ if(!isset($_SESSION['usery_cliente'])){
                                   <span class="ml-3 badge badge-primary badge-pill"><?php echo $row['respon']?></span>
                                 </li>
                               </ul>
+                              <p class="card-text text-center"><small class="text-muted">Nota máxima: 5.0</small></p>
                             </div>
                           </div>
                         </div>
@@ -183,4 +186,4 @@ if(!isset($_SESSION['usery_cliente'])){
     <br><br>
 
 <!-----   Seccion pie de pagina contenido    ----->
-<?php include("includes/footer.php")?>
+<?php include("public/includes/footer.php")?>

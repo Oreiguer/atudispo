@@ -92,10 +92,7 @@ aria-labelledby="exampleModalLabel" aria-hidden="true">
                     </li>
                    
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Nosotros</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Sugerencias</a>
+                        <a class="nav-link" href="sugerencias.php">Sugerencias</a>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -103,13 +100,21 @@ aria-labelledby="exampleModalLabel" aria-hidden="true">
                         </a>
                         <div class="dropdown-menu bg-white " aria-labelledby="navbarDropdownMenuLink">
 
-                            <a class="dropdown-item " id="" href="perfil_clientes.php" >Mi Perfil</a>
+                            <a class="dropdown-item " id="" href="perfil_clientes.php" >
+                            <i class="far fa-id-badge mr-3"></i>
+                            Mi Perfil</a>
 
-                            <a class="dropdown-item " id="" href="lista_evaluacion.php" >Evaluar</a>
+                            <a class="dropdown-item " id="" href="lista_evaluacion.php" >
+                            <i class="fas fa-poll mr-3"></i>
+                            Evaluar</a>
 
-                            <a href="#" class="dropdown-item " data-toggle="modal" data-target="#exampleModalPass">Contraseña</a>
+                            <a href="#" class="dropdown-item " data-toggle="modal" data-target="#exampleModalPass">
+                            <i class="fas fa-unlock-alt mr-3"></i>
+                            Contraseña</a>
 
-                            <a class="dropdown-item " id="cerrar_cesion" href="../controllers/cerrar_sesion.php" onclick="return confirma_salir()" href="#">Cerrar cesión</a>
+                            <a class="dropdown-item " id="cerrar_cesion" href="controllers/cerrar_sesion.php" onclick="return confirma_salir()" href="#">
+                            <i class="fas fa-power-off mr-3"></i>
+                            Cerrar cesión</a>
                             
                         </div>
                     </li>
@@ -119,13 +124,13 @@ aria-labelledby="exampleModalLabel" aria-hidden="true">
     </nav>
 
        <!--------- Mensaje Cambio de contraseña --------->
- <?php include("mensajes_alertas/mensaje_contrasena.php")?>
+ <?php include("public/mensajes_alertas/mensaje_contrasena.php")?>
  <!--------- FIN Mensaje Cambio de contraseña --------->
 
         <!--------- Mensaje correo o contraseña no existen cambio pass --------->
-        <?php include("mensajes_alertas/correo_pass_noExiste.php")?>
+        <?php include("public/mensajes_alertas/correo_pass_noExiste.php")?>
  <!--------- FIN Mensaje correo o contraseña no existen cambio pass--------->
 
          <!--------- Mensaje contraseñas nuevas no coinciden cambio pass --------->
-         <?php include("mensajes_alertas/pass_no_son_iguales.php")?>
+         <?php include("public/mensajes_alertas/pass_no_son_iguales.php")?>
  <!--------- FIN Mensaje contraseñas nuevas no coinciden cambio pass--------->

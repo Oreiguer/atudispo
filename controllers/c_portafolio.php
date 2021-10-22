@@ -39,7 +39,7 @@ if(!file_exists('../certificados')){
         $_SESSION['llenado_campos_obligatorio'] = 'Debe llenar todos los campos';
         $_SESSION['color_mensaje'] = 'danger';
 
-         header("Location: ../public/perfil_tecnicos.php");
+         header("Location: ../perfil_tecnicos.php");
       }else{
 
         if($nombre == null || $nombre == ""){
@@ -58,7 +58,7 @@ if(!file_exists('../certificados')){
             $_SESSION['datos_guardados'] = 'Datos guardados correctamente!';
             $_SESSION['color_mensaje'] = 'success'; 
             
-            header("Location: ../public/perfil_tecnicos.php");
+            header("Location: ../perfil_tecnicos.php");
          }else{
              die("fallo la tercera consulta");
          } 
@@ -103,7 +103,7 @@ if(!file_exists('../certificados')){
             $_SESSION['llenado_campos_obligatorio'] = 'Debe llenar todos los campos';
             $_SESSION['color_mensaje'] = 'danger';
 
-            header("Location: ../public/perfil_tecnicos.php");
+            header("Location: ../perfil_tecnicos.php");
         }else{
 
             if($nombre == null || $nombre == "" ){
@@ -119,7 +119,7 @@ if(!file_exists('../certificados')){
             if($result){
                 $_SESSION['datos_actualizados'] = 'Datos actualizados correctamente!';
                 $_SESSION['color_mensaje'] = 'success'; 
-                header("Location: ../public/perfil_tecnicos.php");
+                header("Location: ../perfil_tecnicos.php");
             }else{
                 die("fallo la tercera consulta");
             } 

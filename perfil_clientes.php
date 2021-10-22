@@ -1,5 +1,5 @@
 <?php 
-include("../db/db.php"); 
+include("db/db.php"); 
 
 // ------  Codigo variable de sesion de usuario desde login -------
  $var_sesion = $_SESSION['usery_cliente'];
@@ -38,16 +38,16 @@ include("../db/db.php");
 ?>
 
 <!-----   Modal tec-datos-personales   ----->
-<?php include("modals/datos-clientes.php")?>
+<?php include("public/modals/datos-clientes.php")?>
 
 <!-----   Modal portafolio  ----->
-<?php include("modals/portafolio.php")?>
+<?php include("public/modals/portafolio.php")?>
 
 <!-----   Seccion cabecera    ----->
-<?php include("includes/header.php")?>
+<?php include("public/includes/header.php")?>
 
 <!-----   Nav-bar   ----->
-<?php include("includes/nav-bar-cliente.php")?>
+<?php include("public/includes/nav-bar-cliente.php")?>
 
 <div class="down-nav-tecnico ">
     <h4 class="text-center text-white pt-3">Perfil Cliente <?php echo $nombres ?> <?php echo $a_paterno ?></h4>
@@ -55,7 +55,7 @@ include("../db/db.php");
     
 
 <!--------- Mensaje actualizacion de datos correctamente --------->
-<?php include("mensajes_alertas/actualizacion_datos.php")?>
+<?php include("public/mensajes_alertas/actualizacion_datos.php")?>
 <!--------- FIN Mensaje actualizacion de datos correctamente --------->
 
 
@@ -184,4 +184,4 @@ include("../db/db.php");
 
 
 <!-----   Seccion pie de pagina contenido    ----->
-<?php include("includes/footer.php")?>
+<?php include("public/includes/footer.php")?>

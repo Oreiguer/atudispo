@@ -10,7 +10,7 @@ if(isset($_POST['agregar'])) {
 
     if(mysqli_num_rows($result) == 1) {
                 
-        header("Location: ../public/perfil_tecnicos.php");
+        header("Location: ../perfil_tecnicos.php");
     
     }else{
         $query = "INSERT INTO especialidades_tecnicos(tecnico, especialidad) VALUES ('$tecnico','$especialidad') ";
@@ -19,7 +19,7 @@ if(isset($_POST['agregar'])) {
 
         if($result){
         
-        header("Location: ../public/perfil_tecnicos.php");
+        header("Location: ../perfil_tecnicos.php");
         }else{
             die("fallo la tercera consulta");
         } 

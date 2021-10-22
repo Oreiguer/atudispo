@@ -1,5 +1,5 @@
 <?php 
-include("../db/db.php"); 
+include("db/db.php"); 
 
 // ------  Codigo variable de sesion de usuario desde login -------
  $var_sesion = $_SESSION['usery_cliente'];
@@ -28,10 +28,10 @@ include("../db/db.php");
 
 
 <!-----   Seccion cabecera    ----->
-<?php include("includes/header.php")?>
+<?php include("public/includes/header.php")?>
 
 <!-----   Nav-bar   ----->
-<?php include("includes/nav-bar-cliente.php")?>
+<?php include("public/includes/nav-bar-cliente.php")?>
 
 
 <div class="down-nav-tecnico ">
@@ -41,7 +41,7 @@ include("../db/db.php");
 <section class="evaluacion_tecnico bg-light pb-5">
     <div class="row justify-content-center ">
       <div class="item-ptd col-7 bg-white rounded mt-5 p-5">
-        <form action="../controllers/c_evaluacion.php" method="POST" >
+        <form action="controllers/c_evaluacion.php" method="POST" >
         <h2 class="text-center text-secondary">Evaluación al técnico</h2>
         <hr>
         <div class="row mt-5 mb-3">
@@ -106,4 +106,4 @@ include("../db/db.php");
 
 
 <!-----   Seccion pie de pagina contenido    ----->
-<?php include("includes/footer.php")?>
+<?php include("public/includes/footer.php")?>

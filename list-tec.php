@@ -1,20 +1,20 @@
 <?php
-include("../db/db.php");
+include("db/db.php");
 
 ?>
 
 <!-----   Seccion cabecera    ----->
-<?php include("includes/header.php");?>
+<?php include("public/includes/header.php");?>
 
 <?php 
 // ------  Codigo variable de sesion de usuario desde login -------
 
 if(!isset($_SESSION['usery_cliente'])){
     
-    include("includes/nav-bar.php");
+    include("public/includes/nav-bar.php");
 
 }else{
-    include("includes/nav-bar-cliente.php");
+    include("public/includes/nav-bar-cliente.php");
 
 }
 
@@ -66,6 +66,7 @@ if(!isset($_SESSION['usery_cliente'])){
     <br>
 
     <section class="list_tec mb-5 pb-5">
+        <h1 class="text-center font-weight-light text-secondary pb-3">Lista de técnicos en tu ubicación</h1>
         <?php
 
         if(isset($_POST['buscar'])){
@@ -96,7 +97,7 @@ if(!isset($_SESSION['usery_cliente'])){
                     <div class="card my-5 card-tec item-card" data-aos="fade-up">
                         <div class="row no-gutters">
                             <div class="col-md-3 pt-5">
-                                <img src="../archivos/<?php echo $img ?>" class="card-img img-tec rounded-circle" alt="avatar">
+                                <img src="archivos/<?php echo $img ?>" class="card-img img-tec rounded-circle" alt="avatar">
                             </div>
                             <div class="col-md-6">
                                 <div class="card-body">
@@ -153,8 +154,8 @@ if(!isset($_SESSION['usery_cliente'])){
                                             
                                 ?> 
                                  
-                                <div class="ml-auto pt-5 mt-3">
-                                    
+                                <div class="ml-auto pt-2 mt-3">
+                                    <h5 class="text-center text-secondary ">Evaluación</h5>
                                     <ul class="list-group item-card">
                                         <li class="list-group-item d-flex justify-content-between align-items-center">
                                         Puntualidad
@@ -169,7 +170,7 @@ if(!isset($_SESSION['usery_cliente'])){
                                         <span class="ml-3 badge badge-secondary  badge-pill"><?php echo number_format($res3, 1, '.', ' ') ?></span>
                                         </li>
                                     </ul>
-                                    <p class="card-text text-center"><small class="text-muted">Nota máxima: 5.0</small></p>
+                                    <p class="card-text text-center mt-2"><small class="text-muted">Nota máxima: 5.0</small></p>
 
                                 </div>
                                 
@@ -179,15 +180,15 @@ if(!isset($_SESSION['usery_cliente'])){
 
         <?php }}}else{ ?>
 
-            <h4 class="text-secondary text-center mt-4">No hay resultados..</h4>
+            <h4 class="text-secondary text-center mt-5">No hay resultados..</h4>
 
        <?php }  }else{ ?>
 
-            <h4 class="text-secondary text-center mt-4">No hay resultados..</h4>
+            <h4 class="text-secondary text-center mt-5">No hay resultados..</h4>
             
        <?php  } ?>       
     </section>
 
 
 <!-----   Seccion pie de pagina contenido    ----->
-<?php include("includes/footer.php")?>
+<?php include("public/includes/footer.php")?>

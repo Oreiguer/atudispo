@@ -48,7 +48,7 @@
  
 	    
 	  
-        <form action="../controllers/c_portafolio.php" method="POST" enctype="multipart/form-data" name="reloj24" id="form1">
+        <form action="controllers/c_portafolio.php" method="POST" enctype="multipart/form-data" name="reloj24" id="form1">
 			
 			<div class="form-group">
 				<label for="recipient-name" class="col-form-label">Presentacion:</label>

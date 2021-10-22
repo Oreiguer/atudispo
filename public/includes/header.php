@@ -4,17 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>atudispo</title>
+	<!--
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
-	<link rel="stylesheet" href="css/style.css">
-	<link rel="stylesheet" href="css/aos.css">
-	<link href="fontawesome/css/all.css" rel="stylesheet">
+	-->
+	<link rel="stylesheet" href="public/css/bootstrap.min.css">
+	
+	<link rel="stylesheet" href="public/css/style.css">
+	<link rel="stylesheet" href="public/css/aos.css">
+	<link href="public/fontawesome/css/all.css" rel="stylesheet">
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
-	<script type="text/javascript" src="js/jquery.js"></script>
-    <script type="text/javascript" src="js/jquery.Rut.js"></script>
-    <script type="text/javascript" src="js/jquery-ui.js"></script>
-    <script type="text/javascript" src="js/jquery.validate.js"></script>
-    <script type="text/javascript" src="js/validarut.js"></script>
+	<script type="text/javascript" src="public/js/jquery.js"></script>
+    <script type="text/javascript" src="public/js/jquery.Rut.js"></script>
+    <script type="text/javascript" src="public/js/jquery-ui.js"></script>
+    <script type="text/javascript" src="public/js/jquery.validate.js"></script>
+    <script type="text/javascript" src="public/js/validarut.js"></script>
     
 
 </head>
@@ -31,7 +35,7 @@
 			<button type="button" class="close" data-dismiss="modal">&times;</button>
 		  </div>
 		  <div class="modal-body ">
-			<form action="../controllers/verificar_login_cliente.php" method="POST" >
+			<form action="controllers/verificar_login_cliente.php" method="POST" >
 			<div class="form-group">
 				<label for="recipient-name" class="col-form-label">Usuario</label>
 				<input type="text" class="form-control" name="cliente" id="usuario_tecnico" placeholder="ejemplo@gmail.com" onpaste="return false" required>
@@ -40,7 +44,12 @@
 				<label for="recipient-name" class="col-form-label">Contraseña</label>
 				<input type="text" class="form-control" name="contrasena" maxlength="8" id="contrasena_tecnico" placeholder="****" autocomplete="off" onpaste="return false" required>
 			</div>
+
+			<a href="recuperar_pass.php?id=1" class="pb-5"><small>¿has olvidado tu contraseña?</small></a>
+
 			<br>
+			<br>
+
 			<div class="row justify-content-center pb-3">
 				<div class="col-6">
 					<a href="registro-cliente.php" class="btn btn-primary form-control">Registrarse</a>
@@ -69,7 +78,7 @@
 			<button type="button" class="close" data-dismiss="modal">&times;</button>
 		  </div>
 		  <div class="modal-body ">
-			<form action="../controllers/verificar_login_tec.php" method="POST" >
+			<form action="controllers/verificar_login_tec.php" method="POST" >
 			<div class="form-group">
 				<label for="recipient-name" class="col-form-label">Usuario</label>
 				<input type="text" class="form-control" name="tecnico" id="usuario_tecnico" placeholder="ejemplo@gmail.com" onpaste="return false" required>
@@ -78,6 +87,9 @@
 				<label for="recipient-name" class="col-form-label">Contraseña</label>
 				<input type="text" class="form-control" name="contrasena" maxlength="8" id="contrasena_tecnico" placeholder="****" autocomplete="off" onpaste="return false" required>
 			</div>
+			<a href="recuperar_pass.php?id=2" class="pb-5"><small>¿has olvidado tu contraseña?</small></a>
+
+			<br>
 			<br>
 			<div class="row justify-content-center pb-3">
 				<div class="col-6">

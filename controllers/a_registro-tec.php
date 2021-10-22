@@ -45,7 +45,7 @@ if(!file_exists('../archivos')){
         $_SESSION['llenado_campos_obligatorio'] = 'Debe llenar todos los campos';
         $_SESSION['color_mensaje'] = 'danger';
 
-         header("Location: ../public/perfil_tecnicos.php");
+         header("Location: ../perfil_tecnicos.php");
       }else{
        //actualizar foto o no
         if($nombre == null || $nombre == ""){
@@ -60,7 +60,7 @@ if(!file_exists('../archivos')){
             $_SESSION['datos_actualizados'] = 'Datos actualizados correctamente!';
             $_SESSION['color_mensaje'] = 'success'; 
         
-            header("Location: ../public/perfil_tecnicos.php");
+            header("Location: ../perfil_tecnicos.php");
         }else{
         die("fallo la primera consulta");
         } 

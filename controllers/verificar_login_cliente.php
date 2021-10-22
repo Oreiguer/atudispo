@@ -20,12 +20,12 @@ if(isset($_POST['c_guardar'])) {
             $rut = $row['rut'];
             $_SESSION['usery_cliente'] = $rut;  
             
-            header("Location: ../index.php");
+            header("Location: ../perfil_clientes.php");
         
         }else{
             $_SESSION['login_mensaje'] = 'Usuario o contraseña incorrecto';
             $_SESSION['color_mensaje_login'] = 'danger';
-            header("Location: ../public/index.php");
+            header("Location: ../index.php");
         } 
     }
     

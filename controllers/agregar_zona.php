@@ -17,7 +17,7 @@ if(isset($_POST['btn-comunas'])) {
             $result2 = mysqli_query($conn, $query2);
 
             if(mysqli_num_rows($result2) == 1) {
-                header("Location: ../public/perfil_tecnicos.php");
+                header("Location: ../perfil_tecnicos.php");
 
             }else{
                 $queryZona = "INSERT INTO zonas_trabajo(tecnico, comuna) VALUES ('$idTecnico','$idComuna')";
@@ -25,7 +25,7 @@ if(isset($_POST['btn-comunas'])) {
 
                 if($resultZona){
                     
-                    header("Location: ../public/perfil_tecnicos.php");
+                    header("Location: ../perfil_tecnicos.php");
                 }else{
                     die("fallo la tercera consulta");
                 }
@@ -33,7 +33,7 @@ if(isset($_POST['btn-comunas'])) {
             
         }else{
             
-            header("Location: ../public/perfil_tecnicos.php");
+            header("Location: ../perfil_tecnicos.php");
         } 
     
     

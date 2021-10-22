@@ -7,7 +7,7 @@ if(isset($_POST['guardar'])) {
 
     if($tecnico == "" || $contrasena == ""){
         
-        header("Location: ../public/index.php");
+        header("Location: ../index.php");
 
     }else{
     
@@ -20,12 +20,12 @@ if(isset($_POST['guardar'])) {
             $rut = $row['rut'];
             $_SESSION['usery'] = $rut;  
             
-            header("Location: ../public/perfil_tecnicos.php");
+            header("Location: ../perfil_tecnicos.php");
         
         }else{
             $_SESSION['login_mensaje'] = 'Usuario o contraseña incorrecto';
             $_SESSION['color_mensaje_login'] = 'danger';
-            header("Location: ../public/index.php");
+            header("Location: ../index.php");
         } 
     }
     

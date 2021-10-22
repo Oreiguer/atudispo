@@ -14,7 +14,7 @@
                         <div class="">
                         <div class="justify-content-center my-3">
                             <div class="">          
-                                <form action="../controllers/a_registro-tec.php" method="POST" enctype="multipart/form-data" name="reloj24" id="form1">
+                                <form action="controllers/a_registro-tec.php" method="POST" enctype="multipart/form-data" name="reloj24" id="form1">
                                 <div class="">
 
 <?php 

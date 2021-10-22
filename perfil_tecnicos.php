@@ -1,5 +1,5 @@
 <?php 
-include("../db/db.php"); 
+include("db/db.php"); 
 
 // ------  Codigo variable de sesion de usuario desde login -------
  $var_sesion = $_SESSION['usery'];
@@ -60,31 +60,31 @@ include("../db/db.php");
 ?>
 
 <!-----   Modal tec-datos-personales   ----->
-<?php include("modals/datos-tec.php")?>
+<?php include("public/modals/datos-tec.php")?>
 
 <!-----   Modal portafolio  ----->
-<?php include("modals/portafolio.php")?>
+<?php include("public/modals/portafolio.php")?>
 
 <!-----   Seccion cabecera    ----->
-<?php include("includes/header.php")?>
+<?php include("public/includes/header.php")?>
 
 <!-----   Nav-bar   ----->
-<?php include("includes/nav-bar-tecnico.php")?>
+<?php include("public/includes/nav-bar-tecnico.php")?>
 
 <div class="down-nav-tecnico ">
     <h4 class="text-center text-white pt-3">Perfil Técnico <?php echo $nombres ?> <?php echo $a_paterno ?></h4>
 </div>
 
 <!--------- Mensaje actualizacion de datos correctamente --------->
-<?php include("mensajes_alertas/actualizacion_datos.php")?>
+<?php include("public/mensajes_alertas/actualizacion_datos.php")?>
 <!--------- FIN Mensaje actualizacion de datos correctamente --------->
     
 <!--------- Mensaje datos guardados correctamente --------->
-<?php include("mensajes_alertas/datos_guardados.php")?>
+<?php include("public/mensajes_alertas/datos_guardados.php")?>
 <!--------- FIN Mensaje datos guardados correctamente  --------->
 
 <!--------- Mensaje datos guardados correctamente --------->
-<?php include("mensajes_alertas/bienvenida_tecnico.php")?>
+<?php include("public/mensajes_alertas/bienvenida_tecnico.php")?>
 <!--------- FIN Mensaje datos guardados correctamente  --------->
 
 <section class="perfil-tecnico bg-light ">
@@ -98,7 +98,7 @@ include("../db/db.php");
                         <hr>
                         <div class="row justify-content-center mb-4">
                           <div class="col-6">
-                            <form action="../controllers/agregar_especialidad.php" method="POST">
+                            <form action="controllers/agregar_especialidad.php" method="POST">
                             <select class="form-control bg-white" required="" name="especialidad">
                               <option disabled="" selected="" value="">Selecciona especialidad</option>
                               <?php 
@@ -130,7 +130,7 @@ include("../db/db.php");
                                 $result = mysqli_query($conn, $query);
                                 while($row = mysqli_fetch_array($result)) { ?>
 
-                                <form action="../controllers/eliminar_especialidad.php" method="POST">
+                                <form action="controllers/eliminar_especialidad.php" method="POST">
                                 <tr>
                                   <th class="text-secondary pl-4" scope="row"><?php echo $row['descripcion_espe']?></th>
                                   <td class="text-right " >
@@ -157,7 +157,7 @@ include("../db/db.php");
                         <hr>
                         <div class="row justify-content-center mb-4">
                           <div class="col-6">
-                            <form action="../controllers/agregar_zona.php" method="POST">
+                            <form action="controllers/agregar_zona.php" method="POST">
 
                             <select name="zonaComunas" required="" id="address" class="address-input form-control">
                               <option disabled="" selected="" value="">Selecciona tu comuna</option>
@@ -196,7 +196,7 @@ include("../db/db.php");
                                 $result = mysqli_query($conn, $query);
                                 while($row = mysqli_fetch_array($result)) { ?>
 
-                                <form action="../controllers/eliminar_zona_trabajo.php" method="POST">
+                                <form action="controllers/eliminar_zona_trabajo.php" method="POST">
                                 <tr>
                                   <th class="text-secondary pl-4" scope="row"><?php echo $row['descripcion_comuna']?></th>
                                   <td class="text-right " >
@@ -359,4 +359,4 @@ include("../db/db.php");
 
 
 <!-----   Seccion pie de pagina contenido    ----->
-<?php include("includes/footer.php")?>
+<?php include("public/includes/footer.php")?>

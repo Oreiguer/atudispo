@@ -10,7 +10,7 @@ if(isset($_POST['eliminar'])) {
 
         if($result){
 
-            header("Location: ../public/perfil_tecnicos.php");
+            header("Location: ../perfil_tecnicos.php");
 
         }else{
             die("Fallo la consulta"); 
